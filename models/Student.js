@@ -28,10 +28,10 @@ const StudentSchema = new mongoose.Schema({
         ],
         required: [true, 'Student level must be provided'],
     },
-    // birthday: {
-    //     type: Date,
-    //     required: true
-    // },
+    age: {
+        type: Date,
+        required: true
+    },
     address: {
         country: String,
         city: String,
@@ -40,7 +40,7 @@ const StudentSchema = new mongoose.Schema({
     },
     phone: {
         type: String,
-        required: true
+        // required: true
     },
     socialLinks: {
         facebook: String,
