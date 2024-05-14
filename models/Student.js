@@ -1,7 +1,7 @@
 const mongoose = require('mongoose');
 
 const StudentSchema = new mongoose.Schema({
-    name: {
+    studentName: {
         type: String, 
         required: [true, 'Name must be provided'],
         trim: true,
@@ -29,7 +29,7 @@ const StudentSchema = new mongoose.Schema({
         required: [true, 'Student level must be provided'],
     },
     age: {
-        type: Date,
+        type: String,
         required: true
     },
     address: {

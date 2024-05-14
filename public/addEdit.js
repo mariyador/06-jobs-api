@@ -2,14 +2,14 @@ import { enableInput, inputEnabled, message, setDiv, token } from "./index.js";
 import { showStudents } from "./students.js";
 
 let addEditDiv = null;
-let name = null;
+let studentName = null;
 let educationLevel = null;
 let age = null;
 let addingStudent = null;
 
 export const handleAddEdit = () => {
   addEditDiv = document.getElementById("edit-student");
-  name = document.getElementById("name");
+  studentName = document.getElementById("studentName");
   age = document.getElementById("age");
   educationLevel = document.getElementById("educationLevel"); 
   addingStudent = document.getElementById("adding-student");
@@ -21,7 +21,7 @@ export const handleAddEdit = () => {
             enableInput(false);
 
             let method = "POST";
-            let url = "/api/v1/students";
+            let url = "/api/v1/students/";
 
             if (addingStudent.textContent === "update") {
                 method = "PATCH";
@@ -36,7 +36,7 @@ export const handleAddEdit = () => {
                         Authorization: `Bearer ${token}`,
                     },
                     body: JSON.stringify({
-                        name: name.value,
+                        studentName: studentName.value,
                         age: age.value,
                         educationLevel: educationLevel.value,
                     }),
@@ -50,7 +50,7 @@ export const handleAddEdit = () => {
                         message.textContent = "The student entry was created.";
                     }
 
-                    name.value = "";
+                    studentName.value = "";
                     age.value = "";
                     educationLevel.value = "";
 
@@ -74,7 +74,7 @@ export const handleAddEdit = () => {
 
 export const showAddEdit = async (studentId) => {
 if (!studentId) {
-    name.value = "";
+    studentName.value = "";
     age.value = "";
     educationLevel.value = "";
     addingStudent.textContent = "add";
@@ -95,7 +95,7 @@ if (!studentId) {
 
         const data = await response.json();
         if (response.status === 200) {
-            name.value = data.student.name;
+            studentName.value = data.student.studentName;
             age.value = data.student.age;
             educationLevel.value = data.student.educationLevel;
             addingStudent.textContent = "update";

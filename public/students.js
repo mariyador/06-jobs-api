@@ -45,7 +45,7 @@ export const showStudents = async () => {
   try {
     enableInput(false);
 
-    const response = await fetch("/api/v1/students", {
+    const response = await fetch("/api/v1/students/", {
       method: "GET",
       headers: {
         "Content-Type": "application/json",
@@ -67,9 +67,9 @@ export const showStudents = async () => {
           let deleteButton = `<td><button type="button" class="deleteButton" data-id=${data.students[i]._id}>delete</button></td>`;
 
           let rowHTML = `
-            <td>${data.students[i].name}</td>
+            <td>${data.students[i].studentName}</td>
             <td>${data.students[i].age}</td>
-            <div>${educationLevel}</div>
+            <div>${data.students[i].educationLevel}</div>
             <div>${editButton}${deleteButton}</div>`;
 
           rowEntry.innerHTML = rowHTML;
