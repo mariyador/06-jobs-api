@@ -5,15 +5,22 @@
     <meta http-equiv="X-UA-Compatible" content="IE=edge" />
     <meta name="viewport" content="width=device-width, initial-scale=1.0" />
     <!-- <meta http-equiv="Content-Security-Policy" content="default-src 'self'; connect-src 'self' https://students-api-doron.onrender.com"> -->
-    <title>Students List</title>
+    <title>Drum Lessons</title>
     <script src="./index.js" type="module"></script>
+    <link rel="stylesheet" href="index.css">
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+    <link href="https://fonts.googleapis.com/css2?family=Bebas+Neue&display=swap" rel="stylesheet">
   </head>
 
   <body>
-    <h1>Students List</h1>
-    <hr />
+    <div class="background-video">
+        <video autoplay loop muted>
+          <source src="image/EgorD.mp4" type="video/mp4">
+        </video>
+    </div>
+    <h1>Drum Lessons</h1>
     <p id="message"></p>
-    <hr />
     <div id="logon-register" style="display:none;">
       <button type="button" id="logon">Sign In</button>
       <button type="button" id="register">Register</button>
@@ -70,15 +77,15 @@
     <div id="edit-student" style="display:none;">
       <form>
         <div>
-          <label for="studentName">Student name:</label>
+          <label for="studentName">Student name :</label>
           <input type="text" id="studentName" />
         </div>
         <div>
-          <label for="age">Age</label>
+          <label for="age">Age :</label>
           <input type="number" id="age" />
         </div>
         <div>
-          <label for="educationLevel">Education Level:</label>
+          <label for="educationLevel">Education Level :</label>
           <select id="educationLevel">
             <option value="beginner">Beginner</option>
             <option value="intermediate">Intermediate</option>

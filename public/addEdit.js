@@ -77,7 +77,7 @@ if (!studentId) {
     studentName.value = "";
     age.value = "";
     educationLevel.value = "";
-    addingStudent.textContent = "add";
+    addingStudent.textContent = "Add";
     message.textContent = "";
 
     setDiv(addEditDiv);
