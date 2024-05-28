@@ -35,12 +35,12 @@ const createStudent = async (req, res) => {
 
 const updateStudent = async (req, res) => {
   const {
-      body: { name, educationLevel },
+      body: { studentName, educationLevel, age },
       user: { userId },
       params:{ id: studentId }
   } = req;
-  if (name === '' || educationLevel === '') {
-      throw new BadRequestError('Name or education level cannot be empty')
+  if (studentName === '' || educationLevel === '' || age === '') {
+      throw new BadRequestError('Name, education level or age cannot be empty')
   }
   const student = await Student.findByIdAndUpdate(
       {

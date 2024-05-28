@@ -1,0 +1,87 @@
+body {
+  margin: 0;
+  padding: 0;
+  justify-content: center;
+  align-items: center;
+  height: 100vh;
+  color: white;
+  font-family: 'Bebas Neue', sans-serif;
+}
+  
+.background-video {
+  position: fixed;
+  top: 0;
+  left: 0;
+  width: 100%;
+  height: 100%;
+  overflow: hidden;
+  z-index: -1;
+}
+  
+.background-video video {
+  position: absolute;
+  top: 0;
+  left: 0;
+  width: 100%;
+  height: 100%;
+  object-fit: cover;
+}
+
+.pacifico-regular {
+  font-family: "Pacifico", cursive;
+  font-weight: 400;
+  font-style: normal;
+  color: white;
+}
+
+h1 {
+  text-align: center;
+  font-size: 200px;
+  text-shadow: 2px 2px 4px rgba(0, 0, 0, 0.5);
+}
+
+#logon-register,
+#logon-div, 
+#register-div,
+#students,
+#message,
+#edit-student {
+  display: flex;
+  flex-direction: column; 
+  justify-content: center;
+  align-items: center;
+  text-align: center; 
+  font-size: 30px;
+}
+
+label {
+  font-size: 30px;
+  text-shadow: 1px 1px 2px rgba(0, 0, 0, 0.5);
+  text-align: right;
+}
+
+input {
+  width: 200px;
+  height: 20px;
+  margin-bottom: 10px; 
+  margin: 0 auto;
+}
+
+#educationLevel {
+  width: 200px;
+  height: 25px;
+}
+
+#students-table {
+  margin: 0 auto;
+  margin-bottom: 25px;
+  font-size: 30px;
+  text-shadow: 2px 2px 4px rgba(0, 0, 0, 0.5);
+  text-align: center;
+  width: 50%;
+}
+
+
+#students-table th {
+  width: 25%;
+}

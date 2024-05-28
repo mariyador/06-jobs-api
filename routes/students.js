@@ -7,7 +7,7 @@ const {
   createStudent,
   updateStudent,
   deleteStudent,
-} = require("../controllers/students");
+} = require("../controllers/students.js");
 
 router.route("/").post(createStudent).get(getAllStudents);
 router.route("/:id").get(getStudent).delete(deleteStudent).patch(updateStudent);

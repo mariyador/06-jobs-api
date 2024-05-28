@@ -1,0 +1,100 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta http-equiv="X-UA-Compatible" content="IE=edge" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <!-- <meta http-equiv="Content-Security-Policy" content="default-src 'self'; connect-src 'self' https://students-api-doron.onrender.com"> -->
+    <title>Drum Lessons</title>
+    <script src="./index.js" type="module"></script>
+    <link rel="stylesheet" href="index.css">
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+    <link href="https://fonts.googleapis.com/css2?family=Bebas+Neue&display=swap" rel="stylesheet">
+  </head>
+
+  <body>
+    <div class="background-video">
+        <video autoplay loop muted>
+          <source src="image/EgorD.mp4" type="video/mp4">
+        </video>
+    </div>
+    <h1>Drum Lessons</h1>
+    <p id="message"></p>
+    <div id="logon-register" style="display:none;">
+      <button type="button" id="logon">Sign In</button>
+      <button type="button" id="register">Register</button>
+    </div>
+    <div id="logon-div" style="display:none;">
+      <form>
+        <div>
+          <label for="email">Email:</label>
+          <input type="email" id="email" />
+        </div>
+        <div>
+          <label for="password">Password:</label>
+          <input type="password" id="password" />
+        </div>
+        <button type="button" id="logon-button">Sign In</button>
+        <button type="button" id="logon-cancel">Cancel</button>
+      </form>
+    </div>
+    <div id="register-div" style="display:none;">
+      <form>
+        <div>
+          <label for="name">Name:</label>
+          <input type="text" id="name" />
+        </div>
+        <div>
+          <label for="email1">Email:</label>
+          <input type="email" id="email1" />
+        </div>
+        <div>
+          <label for="password1">Password:</label>
+          <input type="password" id="password1" />
+        </div>
+        <div>
+          <label for="password2">Verify password:</label>
+          <input type="password" id="password2" />
+        </div>
+        <button type="button" id="register-button">Register</button>
+        <button type="button" id="register-cancel">Cancel</button>
+      </form>
+    </div>
+    <div id="students" style="display:none;">
+      <p id="students-message"></p>
+      <table id="students-table">
+        <tr id="students-table-header">
+          <th>Student name</th>
+          <th>Age</th>
+          <th>Education Level</th>
+          <th colspan="2"></th>
+        </tr>
+      </table>
+      <button type="button" id="add-student">Add Student</button>
+      <button type="button" id="logoff">Sign out</button>
+    </div>
+    <div id="edit-student" style="display:none;">
+      <form>
+        <div>
+          <label for="studentName">Student name :</label>
+          <input type="text" id="studentName" />
+        </div>
+        <div>
+          <label for="age">Age :</label>
+          <input type="number" id="age" />
+        </div>
+        <div>
+          <label for="educationLevel">Education Level :</label>
+          <select id="educationLevel">
+            <option value="beginner">Beginner</option>
+            <option value="intermediate">Intermediate</option>
+            <option value="advanced">Advanced</option>
+          </select>
+        </div>
+        <button type="button" id="adding-student">Add</button>
+        <button type="button" id="edit-cancel">Cancel</button>
+      </form>
+    </div>
+  </body>
+</html>
